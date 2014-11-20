@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: '9526349'
+author:
+  display_name: Robert
+  login: panthar
+  email: panthar@gmail.com
+  url: http://panthar.org/
+author_login: panthar
+author_email: panthar@gmail.com
+author_url: http://panthar.org/
+wordpress_id: 8
+wordpress_url: http://panthar.org/2002/02/08/9526349/
+date: '2002-02-08 15:49:03 -0600'
+date_gmt: '2002-02-08 20:49:03 -0600'
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+<p>Just opened my blog. Quite exciting!</p>

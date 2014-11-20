@@ -1,0 +1,27 @@
+---
+layout: post
+status: publish
+published: true
+title: Mmm. Pie
+author:
+  display_name: Robert
+  login: panthar
+  email: panthar@gmail.com
+  url: http://panthar.org/
+author_login: panthar
+author_email: panthar@gmail.com
+author_url: http://panthar.org/
+wordpress_id: 254
+wordpress_url: http://panthar.org/?p=254
+date: '2012-01-04 09:39:48 -0600'
+date_gmt: '2012-01-04 15:39:48 -0600'
+categories:
+- Humor
+tags:
+- ninja
+- pie
+- wallpaper
+comments: []
+---
+<p>Rob at work had this cool wallpaper on his computer today:<a href="http:&#47;&#47;panthar.org&#47;wp-content&#47;uploads&#47;2012&#47;01&#47;ninja_pie_in_the_face-1920x1200.jpg"><img class="alignnone size-medium wp-image-255" title="Ninja Pie" src="http:&#47;&#47;panthar.org&#47;wp-content&#47;uploads&#47;2012&#47;01&#47;ninja_pie_in_the_face-1920x1200-300x187.jpg" alt="" width="300" height="187" &#47;><&#47;a></p>
+<p>I tracked it down and here is the link to the original wallpaper site to grab different sizes:&nbsp;<a title="http:&#47;&#47;slip.to&#47;z4B3QX" href="http:&#47;&#47;slip.to&#47;z4B3QX" target="_blank">http:&#47;&#47;slip.to&#47;z4B3QX<&#47;a></p>

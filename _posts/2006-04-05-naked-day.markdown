@@ -1,0 +1,24 @@
+---
+layout: post
+status: publish
+published: true
+title: Naked Day!
+author:
+  display_name: Robert
+  login: panthar
+  email: panthar@gmail.com
+  url: http://panthar.org/
+author_login: panthar
+author_email: panthar@gmail.com
+author_url: http://panthar.org/
+wordpress_id: 105
+wordpress_url: http://panthar.org/2006/04/03/naked-day/
+date: '2006-04-05 00:00:13 -0500'
+date_gmt: '2006-04-05 05:00:13 -0500'
+categories:
+- Internet
+tags: []
+comments: []
+---
+<p><a href="http:&#47;&#47;naked.dustindiaz.com&#47;">CSS Naked Day<&#47;a></p>
+<p>Yup - today is CSS Naked Day.  Strip all that CSS and see how your site works!</p>

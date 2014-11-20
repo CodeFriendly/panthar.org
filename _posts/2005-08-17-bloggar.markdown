@@ -1,0 +1,26 @@
+---
+layout: post
+status: publish
+published: true
+title: Bloggar??
+author:
+  display_name: Robert
+  login: panthar
+  email: panthar@gmail.com
+  url: http://panthar.org/
+author_login: panthar
+author_email: panthar@gmail.com
+author_url: http://panthar.org/
+wordpress_id: 23
+wordpress_url: http://panthar.org/2005/08/17/bloggar/
+date: '2005-08-17 10:25:19 -0500'
+date_gmt: '2005-08-17 15:25:19 -0500'
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+<p>Here's an interesting piece of software: w.bloggar (<a href="http:&#47;&#47;www.bloggar.com">http:&#47;&#47;www.bloggar.com&#47;<&#47;a>).<br />
+It seems to be able to post to a wide variety of blogs.<br />
+This might be a good tool for future posts.<br />
+We will see....</p>

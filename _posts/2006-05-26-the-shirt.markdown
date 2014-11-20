@@ -1,0 +1,25 @@
+---
+layout: post
+status: publish
+published: true
+title: The Shirt
+author:
+  display_name: Robert
+  login: panthar
+  email: panthar@gmail.com
+  url: http://panthar.org/
+author_login: panthar
+author_email: panthar@gmail.com
+author_url: http://panthar.org/
+wordpress_id: 111
+wordpress_url: http://panthar.org/2006/05/26/the-shirt/
+date: '2006-05-26 15:07:17 -0500'
+date_gmt: '2006-05-26 20:07:17 -0500'
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+<p><a href="http:&#47;&#47;members.cox.net&#47;crandall11&#47;money&#47;shirt&#47;">The Shirt<&#47;a><br />
+Now this is a fun little piece of origami!  Who can make the highest denomination of shirt?  Brag in the comments!<br />
+<!-- ckey="656F0E95" --></p>
