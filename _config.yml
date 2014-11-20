@@ -1,12 +1,12 @@
 # Site settings
 title: panthar vs. the internet
-email: your-email@domain.com
+email: 
 description: > # this means to ignore newlines until "baseurl:"
     These are the adventures of a professional computer tamer.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://scruffybob.com/" # the base hostname & protocol for your site
+twitter_username: 
+github_username: 
 
 # Build settings
 markdown: kramdown
