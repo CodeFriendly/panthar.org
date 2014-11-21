@@ -1,0 +1,67 @@
+---
+layout: post
+title: 'HOWTO: PHP with MSSQL on Ubuntu 6.06'
+date: 2006-06-15 18:38:32.000000000 -05:00
+categories:
+- Coding
+- HOWTO
+- Internet
+- Linux
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '2678677'
+  views: '10655'
+  _utw_tags_0: no tags
+  _edit_last: '2'
+author:
+  login: panthar
+  email: panthar@gmail.com
+  display_name: Robert
+  first_name: Robert
+  last_name: Holak
+---
+<p>I recently set up an Ubuntu server that needed to access a MSSQL database. The php5-sybase package sort of worked (the queries appeared to work, but data was missing). So, I set out to build some .deb packages with MSSQL support built in.</p>
+<p><!--more--></p>
+<p>First make sure you have the Debian package development tools:</p>
+<p><code>apt-get install build-essential debhelper</code></p>
+<p>(More tools might be needed depending on what you already have installed, but you will tend to get warnings about what is missing)</p>
+<p>Then, download the PHP sources:</p>
+<p><code>apt-get source php5</code></p>
+<p>(The current version in the Ubuntu repositories at this time is php5-5.1.2, so adjust for version numbers in the future.)</p>
+<p>And you will need all the dependencies for building PHP:</p>
+<p><code>apt-get build-dep php5</code></p>
+<p>Change into the debian build directory for PHP:</p>
+<p><code>cd php5-5.1.2/debian</code></p>
+<p>The first step is to edit the â€œmodulelistâ€? file. Insert a line above the one that says</p>
+<p><code>mysql MySQL</code></p>
+<p>with the contents:</p>
+<p><code>mssql MSSQL</code></p>
+<p>Next, edit the file "rules" and look for the section starting with "configure-apache2-stamp". You will see a line similar to:</p>
+<p><code>--with-mysql=shared,/usr</code></p>
+<p>Open a line above this with the contents:</p>
+<p><code>--with-mssql=shared,/usr</code></p>
+<p>Make sure not to forget the backslash on the end.Now, we must edit the "control" file in the same directory.  Add this to the end of the file:</p>
+<pre style="font-size: 11px">Package: php5-mssql
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${php:Depends}, php5-common (= ${Source-Version})
+Description: MSSQL module for php5
+ This package provides a module for MSSQL using FreeTDS.
+ .
+ PHP5 is an HTML-embedded scripting language. Much of its syntax is borrowed
+ from C, Java and Perl with a couple of unique PHP-specific features thrown
+ in. The goal of the language is to allow web developers to write
+ dynamically generated pages quickly.</pre>
+<p>Move up a directory.</p>
+<p><code>cd ..</code></p>
+<p>Now, run:</p>
+<p><code>dpkg-buildpackage</code></p>
+<p>And go get something to eat. This will do the whole configure/compile for PHP and create debs in the parent directory. When this process is done, move up to the parent directory:</p>
+<p><code>cd ..</code></p>
+<p>And, you will see all of the PHP debs, including the new php5-mssql_[version].deb</p>
+<p>Run a dpkg -i on the ones you need, and you should be all set to connect to MSSQL databases.</p>
+<p><!-- technorati tags begin --></p>
+<p style="font-size: 10px; text-align: right">technorati tags:<a href="http://technorati.com/tag/php" rel="tag">php</a>, <a href="http://technorati.com/tag/mssql" rel="tag">mssql</a>, <a href="http://technorati.com/tag/ubuntu" rel="tag">ubuntu</a></p>
+<p><!-- technorati tags end --></p>

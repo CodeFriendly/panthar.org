@@ -1,0 +1,36 @@
+---
+layout: post
+title: 'HOWTO: Palm Treo 755p in Linux'
+date: 2007-06-22 13:46:08.000000000 -05:00
+categories:
+- HOWTO
+- Linux
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  views: '280'
+  _utw_tags_0: no tags
+  dsq_thread_id: '2678710'
+author:
+  login: panthar
+  email: panthar@gmail.com
+  display_name: Robert
+  first_name: Robert
+  last_name: Holak
+---
+<p>I recently purchased a Palm Treo 755p.  One of the first things I did was to plug it into my Linux machine to try the syncing capabilities, since Linux distributions (I am currently using Ubuntu 7.04) tend to support Palm devices pretty well.  But, when I plugged it in, I discovered that it was not recognized by the kernel.  So, I figured out what was needed to make it function:</p>
+<p><!--more--></p>
+<p>After poking through the kernel logs and watching udev events, I was able to make this device work perfectly:</p>
+<p>I created the file:</p>
+<pre>/etc/udev/rules.d/10-custom.rules</pre>
+<p>Inside this file, I inserted the following:</p>
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="0830", ATTR{idProduct}=="0061", \
+    RUN+="/sbin/modprobe visor"</pre>
+<p>Then, I restarted udev (<code>/etc/init.d/udev restart</code>) and the device works properly.  The correct module is loaded, /dev/ttyUSB0 and /dev/ttyUSB1 are created, and /dev/pilot is created, linking to the correct USB device.</p>
+<p>If you have a different PalmOS-based device that is not loading properly, this can also work for you.  Just do:</p>
+<pre>lsusb</pre>
+<p>and look for a line like:</p>
+<pre>Bus 002 Device 020: ID 0830:0061 Palm, Inc.</pre>
+<p>Inside the 10-custom.rules file, use the values before and after the colon as the <code>ATTR{idVendor}</code> and <code>ATTR{idProduct}</code></p>
